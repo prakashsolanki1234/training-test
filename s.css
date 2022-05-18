@@ -1,0 +1,19 @@
+a{
+    transform:matrix3d() ;
+    padding: 8px;
+    border: 3px solid blueviolet;
+    text-decoration: none;
+}
+a:hover{
+    align-items: center;
+    background-color:palevioletred;
+    color: aliceblue;
+    text-decoration:solid ;
+   
+}
+.fnav{
+
+    left: 20%;
+    right: 50%;
+    margin: 20% 40%;
+}
