@@ -1,0 +1,24 @@
+.maincon{
+    align-items: center;
+    border: 1px solid black;
+
+}
+.logo{
+    width: 200px;
+    /* border-bottom: 20px solid silver;
+border-bottom-width:10px solid red ; */
+}
+.hr{
+    color: brown;
+    size: 50%;
+    width: 10px;
+    border-width: 50px;
+    margin: 10px;
+}
+input{
+    margin-bottom: 10px;
+
+}
+#cars{
+    width: 30%;
+}
