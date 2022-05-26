@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+<script>
+let myArr=[{
+    date:"16/05/2022",
+    login:"09:00",
+    logout:"19:00"
+},
+{
+    date:"17/05/2022",
+    login:"08:00",
+    logout:"17:00"
+},
+{
+    date:"18/05/2022",
+    login:"09:00",
+    logout:"18:00"
+},
+{
+    date:"23/05/2022",
+    login:"06:00",
+    logout:"15:00"
+}
+];            
+
+
+for(let i=1;i<myArr.length;i++)
+{
+    if(myArr[i-1].date==myArr[0].date){
+        console.log(myArr[0].date,"=>"," fully rested");
+    }
+    
+    var spl=myArr[i-1].date.split('/');
+    const d = [ spl[1], spl[0], spl[2] ].join('/');
+    var obj= new Date(d + ' ' + myArr[i-1].logout + ':00');
+    // console.log("logout time=>" ,obj);
+    
+    var spl2=myArr[i].date.split('/');
+    const d2 = [ spl2[1], spl2[0], spl2[2] ].join('/');
+    var obje= new Date(d2 + ' ' + myArr[i].login + ':00');
+    // console.log("login time=>" ,obje);
+    
+            
+    let diff=obje.getTime() - obj.getTime();
+    // console.log(diff);
+    test=diff/(1000*60*60);
+    if(test>=24){
+    console.log(myArr[i].date,"=>",Math.floor(diff/(1000*3600*24))+'Days',(diff/(1000*3600)%24)+'Hours', Math.floor((diff / (1000 * 60)) % 60)+'Minutes',Math.floor((diff/1000) % 60)+'Second');
+    }
+    else
+    console.log(myArr[i].date,"=>",Math.floor(diff/(1000*60*60))+'Hours', Math.floor((diff / (1000 * 60)) % 60)+'Minutes',Math.floor((diff / 1000) % 60)+'Second');
+    
+}
+</script>
+</body>
+</html>
